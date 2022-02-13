@@ -8,7 +8,6 @@ class Librnd < Formula
 
   depends_on "pkg-config" => :build
   depends_on "gd"
-  # depends_on "gtk4"
   depends_on "gtk+"
 
   def install
