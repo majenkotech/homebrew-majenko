@@ -5,8 +5,14 @@ class PcbRnd < Formula
   sha256 "4c8a4371a9420e3da499858edc35dbee85a5cf6fddaccca6c4536b30c08503fd"
   license "GPL-2.0-only"
 
-  depends_on "librnd"
+  bottle do
+    rebuild 1
+    root_url "https://github.com/majenkotech/homebrew-majenko/releases/download/v1.0.0/"
+    sha256 monterey: "8c019bfffe7d3c779d79364ccabc3e043961608a29eba46eaf7b041daadcf78e"
+  end
+
   depends_on "gd"
+  depends_on "librnd"
 
   def install
     system "./configure", "--prefix=#{prefix}"
